@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnergySmart Blog - Contact</title>
+    <link rel="stylesheet" href="energysmart.css">
+
+    <script>
+        function submitFormAsJson(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const formData = new FormData(event.target); // Collect form data
+            const jsonData = Object.fromEntries(formData.entries()); // Convert form data to JSON
+
+            fetch('http://localhost:8083/contact', { // Send the data as JSON
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(jsonData)
+            })
+            .then(response => {
+
+          if(response.ok){
+
+          window.location.href = 'thankyou.html';
+        }else{
+
+    console.error('Error:', response.status)
+            }
+ 
+                  })
+         .catch(error => console.error('Error:', error));
+           }
+    </script>
+
+</head>
+<body>
+    <header>
+        <h2>EnergySmart</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="get-started.html">Get Started</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="getStarted">
+        <section class="hero-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have any questions or inquiries? Feel free to reach out to us.</p>
+                <form id="contactForm" action="#" method="post" onsubmit="submitFormAsJson(event)">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" required><br><br>
+
+                    <label for="secondname">Last Name:</label>
+                    <input type="text" id="secondname" name="secondname" required><br><br>
+
+                    <label for="email">Company Email:</label>
+                    <input type="text" id="email" name="email" required><br><br>
+
+                    <label for="phonenumber">Phone Number:</label>
+                    <input type="text" id="phonenumber" name="phonenumber" required><br><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Company</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-media-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">LinkedIn</a>
+            <a href="#" class="social-link">Instagram</a>
+        </div>
+        <p>&copy; 2024 EnergySmart. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+``

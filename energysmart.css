@@ -1,0 +1,199 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* CSS styles for blog post containers */
+#blogPosts {
+    display: flex;
+    justify-content: space-between; /* Align containers on the left and right */
+    flex-wrap: wrap; /* Allow wrapping of blog post items */
+}
+
+/* CSS styles for individual blog post boxes */
+article {
+    width: calc(50% - 10px); /* Set the width of each box to half the container width */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+    background-color: #ffffff; /* Background color */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding */
+    box-sizing: border-box; /* Include padding and border in the box size */
+}
+
+/* CSS styles for blog post title */
+article h2 {
+    font-size: 18px; /* Font size */
+    margin-bottom: 10px; /* Add some bottom margin for spacing */
+}
+
+/* CSS styles for blog post content */
+article p {
+    font-size: 14px; /* Font size */
+    line-height: 1.5; /* Line height */
+    margin-bottom: 10px; /* Add some bottom margin for spacing */
+}
+
+/* CSS styles for read more link */
+article a {
+    text-decoration: none; /* Remove underline */
+    color: blue; /* Link color */
+}
+
+/* Clearfix to fix alignment issues */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+header {
+   
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h2{
+
+   margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero-section {
+    background-color: #f2f2f2;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.hero-section button {
+    background-color: #252525;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.feature {
+    margin-bottom: 40px;
+}
+
+.feature h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.feature p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    background-color: #f2f2f2;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.testimonial blockquote {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.testimonial cite {
+    font-style: italic;
+}
+
+footer {
+    background-color:#00BFFF;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer nav ul {
+    margin-bottom: 20px;
+}
+
+footer nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-media-links a {
+    color: #fff;
+    margin-right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 28px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    .hero-section button {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    .testimonial blockquote {
+        font-size: 20px;
+    }
+    .getStartedButton{
+        background-color: #00BFFF;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
